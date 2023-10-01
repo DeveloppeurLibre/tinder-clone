@@ -15,7 +15,7 @@ struct MatchingView: View {
         VStack(spacing: 0) {
             Header()
                 .padding(.horizontal)
-            ProfileCard()
+            ProfileCard(profile: .previewProfile )
             Spacer()
         }
     }
