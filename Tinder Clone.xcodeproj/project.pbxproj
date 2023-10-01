@@ -11,6 +11,9 @@
 		642AF8982AC9B51300237BEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642AF8972AC9B51300237BEC /* ContentView.swift */; };
 		642AF89A2AC9B51600237BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642AF8992AC9B51600237BEC /* Assets.xcassets */; };
 		642AF89D2AC9B51600237BEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642AF89C2AC9B51600237BEC /* Preview Assets.xcassets */; };
+		64CED16E2AC9B66A00D9CB1F /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED16D2AC9B66A00D9CB1F /* MatchingView.swift */; };
+		64CED1702AC9B67400D9CB1F /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED16F2AC9B67400D9CB1F /* MatchingViewModel.swift */; };
+		64CED1752AC9B71F00D9CB1F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED1742AC9B71F00D9CB1F /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		642AF8972AC9B51300237BEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		642AF8992AC9B51600237BEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		642AF89C2AC9B51600237BEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		64CED16D2AC9B66A00D9CB1F /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
+		64CED16F2AC9B67400D9CB1F /* MatchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingViewModel.swift; sourceTree = "<group>"; };
+		64CED1742AC9B71F00D9CB1F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				642AF8952AC9B51300237BEC /* Tinder_CloneApp.swift */,
+				64CED1722AC9B70F00D9CB1F /* Domain */,
+				64CED1712AC9B6E800D9CB1F /* Presentation */,
 				642AF8972AC9B51300237BEC /* ContentView.swift */,
 				642AF8992AC9B51600237BEC /* Assets.xcassets */,
 				642AF89B2AC9B51600237BEC /* Preview Content */,
@@ -65,6 +73,55 @@
 				642AF89C2AC9B51600237BEC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		642AF8A32AC9B5F600237BEC /* Matching */ = {
+			isa = PBXGroup;
+			children = (
+				642AF8A42AC9B60400237BEC /* View */,
+				64CED16C2AC9B65A00D9CB1F /* View Model */,
+			);
+			path = Matching;
+			sourceTree = "<group>";
+		};
+		642AF8A42AC9B60400237BEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64CED16D2AC9B66A00D9CB1F /* MatchingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64CED16C2AC9B65A00D9CB1F /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				64CED16F2AC9B67400D9CB1F /* MatchingViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		64CED1712AC9B6E800D9CB1F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				642AF8A32AC9B5F600237BEC /* Matching */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		64CED1722AC9B70F00D9CB1F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				64CED1732AC9B71400D9CB1F /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		64CED1732AC9B71400D9CB1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64CED1742AC9B71F00D9CB1F /* Profile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				642AF8982AC9B51300237BEC /* ContentView.swift in Sources */,
+				64CED1752AC9B71F00D9CB1F /* Profile.swift in Sources */,
+				64CED1702AC9B67400D9CB1F /* MatchingViewModel.swift in Sources */,
+				64CED16E2AC9B66A00D9CB1F /* MatchingView.swift in Sources */,
 				642AF8962AC9B51300237BEC /* Tinder_CloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
