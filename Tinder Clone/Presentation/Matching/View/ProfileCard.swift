@@ -28,6 +28,8 @@ struct ProfileCard: View {
                     profileName
                     location
                 }
+                Text(profile.description)
+                    .foregroundStyle(.white)
                 HStack {
                     CircleButton(style: .rewind, action: {})
                     Spacer()
