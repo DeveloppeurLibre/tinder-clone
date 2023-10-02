@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6409061A2ACB201E002BF9E3 /* TagPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640906192ACB201E002BF9E3 /* TagPill.swift */; };
 		642AF8962AC9B51300237BEC /* Tinder_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642AF8952AC9B51300237BEC /* Tinder_CloneApp.swift */; };
 		642AF89A2AC9B51600237BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642AF8992AC9B51600237BEC /* Assets.xcassets */; };
 		642AF89D2AC9B51600237BEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642AF89C2AC9B51600237BEC /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		640906192ACB201E002BF9E3 /* TagPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPill.swift; sourceTree = "<group>"; };
 		642AF8922AC9B51300237BEC /* Tinder Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		642AF8952AC9B51300237BEC /* Tinder_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tinder_CloneApp.swift; sourceTree = "<group>"; };
 		642AF8992AC9B51600237BEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				64CED1762AC9BB7500D9CB1F /* Header.swift */,
 				64CED17C2AC9C88900D9CB1F /* CircleButton.swift */,
 				64D11D402AC9CC1000069A67 /* ProfileCard.swift */,
+				640906192ACB201E002BF9E3 /* TagPill.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			files = (
 				64CED1752AC9B71F00D9CB1F /* Profile.swift in Sources */,
 				64CED1702AC9B67400D9CB1F /* MatchingViewModel.swift in Sources */,
+				6409061A2ACB201E002BF9E3 /* TagPill.swift in Sources */,
 				64CED17D2AC9C88900D9CB1F /* CircleButton.swift in Sources */,
 				64CED16E2AC9B66A00D9CB1F /* MatchingView.swift in Sources */,
 				64D11D412AC9CC1000069A67 /* ProfileCard.swift in Sources */,
