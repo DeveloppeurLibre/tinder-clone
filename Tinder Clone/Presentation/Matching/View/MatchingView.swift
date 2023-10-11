@@ -16,6 +16,7 @@ struct MatchingView: View {
         print("Profiles who liked you: \(profiles.map { $0.name }.joined(separator: ", "))")
         return profiles
     }()
+    @State private var matches: [Profile] = []
     
     var body: some View {
         VStack(spacing: 0) {

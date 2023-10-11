@@ -13,6 +13,7 @@
 		642AF89D2AC9B51600237BEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642AF89C2AC9B51600237BEC /* Preview Assets.xcassets */; };
 		64557CB62AD685BE00F8EFFD /* YogaSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 64557CB52AD685BE00F8EFFD /* YogaSwiftUI */; };
 		64557CB82AD697BC00F8EFFD /* MatchAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64557CB72AD697BC00F8EFFD /* MatchAlert.swift */; };
+		64557CBC2AD6A9CD00F8EFFD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64557CBB2AD6A9CD00F8EFFD /* MainTabView.swift */; };
 		64CED16E2AC9B66A00D9CB1F /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED16D2AC9B66A00D9CB1F /* MatchingView.swift */; };
 		64CED1702AC9B67400D9CB1F /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED16F2AC9B67400D9CB1F /* MatchingViewModel.swift */; };
 		64CED1752AC9B71F00D9CB1F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED1742AC9B71F00D9CB1F /* Profile.swift */; };
@@ -29,6 +30,7 @@
 		642AF8992AC9B51600237BEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		642AF89C2AC9B51600237BEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		64557CB72AD697BC00F8EFFD /* MatchAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAlert.swift; sourceTree = "<group>"; };
+		64557CBB2AD6A9CD00F8EFFD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		64CED16D2AC9B66A00D9CB1F /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 		64CED16F2AC9B67400D9CB1F /* MatchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingViewModel.swift; sourceTree = "<group>"; };
 		64CED1742AC9B71F00D9CB1F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -109,6 +111,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		64557CB92AD6A9BD00F8EFFD /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				64557CBA2AD6A9C300F8EFFD /* View */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		64557CBA2AD6A9C300F8EFFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64557CBB2AD6A9CD00F8EFFD /* MainTabView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		64CED16C2AC9B65A00D9CB1F /* View Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +138,7 @@
 		64CED1712AC9B6E800D9CB1F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				64557CB92AD6A9BD00F8EFFD /* TabView */,
 				642AF8A32AC9B5F600237BEC /* Matching */,
 			);
 			path = Presentation;
@@ -227,6 +246,7 @@
 				64D11D412AC9CC1000069A67 /* ProfileCard.swift in Sources */,
 				64CED1772AC9BB7500D9CB1F /* Header.swift in Sources */,
 				642AF8962AC9B51300237BEC /* Tinder_CloneApp.swift in Sources */,
+				64557CBC2AD6A9CD00F8EFFD /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

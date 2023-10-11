@@ -11,7 +11,7 @@ import SwiftUI
 struct Tinder_CloneApp: App {
     var body: some Scene {
         WindowGroup {
-            MatchingView()
+            MainTabView()
         }
     }
 }
