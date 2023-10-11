@@ -14,9 +14,10 @@ struct TagPill: View {
     
     var body: some View {
         Text(tag)
+            .font(.system(size: 14))
             .foregroundStyle(.white)
-            .padding(.horizontal, 16)
-            .padding(.vertical, 8)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 6)
             .background(
                 Group {
                     switch mode {

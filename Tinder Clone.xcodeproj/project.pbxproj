@@ -11,12 +11,12 @@
 		642AF8962AC9B51300237BEC /* Tinder_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642AF8952AC9B51300237BEC /* Tinder_CloneApp.swift */; };
 		642AF89A2AC9B51600237BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642AF8992AC9B51600237BEC /* Assets.xcassets */; };
 		642AF89D2AC9B51600237BEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642AF89C2AC9B51600237BEC /* Preview Assets.xcassets */; };
+		64557CB62AD685BE00F8EFFD /* YogaSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 64557CB52AD685BE00F8EFFD /* YogaSwiftUI */; };
 		64CED16E2AC9B66A00D9CB1F /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED16D2AC9B66A00D9CB1F /* MatchingView.swift */; };
 		64CED1702AC9B67400D9CB1F /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED16F2AC9B67400D9CB1F /* MatchingViewModel.swift */; };
 		64CED1752AC9B71F00D9CB1F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED1742AC9B71F00D9CB1F /* Profile.swift */; };
 		64CED1772AC9BB7500D9CB1F /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED1762AC9BB7500D9CB1F /* Header.swift */; };
 		64CED1792AC9BC7600D9CB1F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64CED1782AC9BC7600D9CB1F /* Colors.xcassets */; };
-		64CED17B2AC9BD6800D9CB1F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED17A2AC9BD6800D9CB1F /* ColorExtension.swift */; };
 		64CED17D2AC9C88900D9CB1F /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CED17C2AC9C88900D9CB1F /* CircleButton.swift */; };
 		64D11D412AC9CC1000069A67 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D11D402AC9CC1000069A67 /* ProfileCard.swift */; };
 /* End PBXBuildFile section */
@@ -32,7 +32,6 @@
 		64CED1742AC9B71F00D9CB1F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		64CED1762AC9BB7500D9CB1F /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		64CED1782AC9BC7600D9CB1F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		64CED17A2AC9BD6800D9CB1F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		64CED17C2AC9C88900D9CB1F /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		64D11D402AC9CC1000069A67 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64557CB62AD685BE00F8EFFD /* YogaSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,6 @@
 				642AF8952AC9B51300237BEC /* Tinder_CloneApp.swift */,
 				64CED1722AC9B70F00D9CB1F /* Domain */,
 				64CED1712AC9B6E800D9CB1F /* Presentation */,
-				64CED17A2AC9BD6800D9CB1F /* ColorExtension.swift */,
 				642AF8992AC9B51600237BEC /* Assets.xcassets */,
 				64CED1782AC9BC7600D9CB1F /* Colors.xcassets */,
 				642AF89B2AC9B51600237BEC /* Preview Content */,
@@ -155,6 +154,9 @@
 			dependencies = (
 			);
 			name = "Tinder Clone";
+			packageProductDependencies = (
+				64557CB52AD685BE00F8EFFD /* YogaSwiftUI */,
+			);
 			productName = "Tinder Clone";
 			productReference = 642AF8922AC9B51300237BEC /* Tinder Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +185,9 @@
 				Base,
 			);
 			mainGroup = 642AF8892AC9B51300237BEC;
+			packageReferences = (
+				64557CB42AD685BE00F8EFFD /* XCRemoteSwiftPackageReference "Yoga-SwiftUI" */,
+			);
 			productRefGroup = 642AF8932AC9B51300237BEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -217,7 +222,6 @@
 				64CED16E2AC9B66A00D9CB1F /* MatchingView.swift in Sources */,
 				64D11D412AC9CC1000069A67 /* ProfileCard.swift in Sources */,
 				64CED1772AC9BB7500D9CB1F /* Header.swift in Sources */,
-				64CED17B2AC9BD6800D9CB1F /* ColorExtension.swift in Sources */,
 				642AF8962AC9B51300237BEC /* Tinder_CloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64557CB42AD685BE00F8EFFD /* XCRemoteSwiftPackageReference "Yoga-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tiepvuvan/Yoga-SwiftUI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64557CB52AD685BE00F8EFFD /* YogaSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64557CB42AD685BE00F8EFFD /* XCRemoteSwiftPackageReference "Yoga-SwiftUI" */;
+			productName = YogaSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 642AF88A2AC9B51300237BEC /* Project object */;
 }

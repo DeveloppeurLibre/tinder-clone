@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import YogaSwiftUI
 
 struct ProfileCard: View {
     
@@ -26,10 +27,21 @@ struct ProfileCard: View {
             VStack(alignment: .leading, spacing: 16) {
                 VStack(alignment: .leading, spacing: 4) {
                     profileName
-                    location
+                    if pictureIndex == 0 {
+                        if profile.tags.count < 3 {
+                            tagsGrid
+                        }
+                        description
+                    }
+                    if pictureIndex == 1 {
+                        if profile.tags.count >= 3 {
+                            tagsGrid
+                        }
+                    }
+                    if pictureIndex > 1 {
+                        location
+                    }
                 }
-                Text(profile.description)
-                    .foregroundStyle(.white)
                 HStack {
                     CircleButton(style: .rewind, action: {})
                     Spacer()
@@ -78,6 +90,11 @@ struct ProfileCard: View {
         .padding()
     }
     
+    private var description: some View {
+        Text(profile.description)
+            .foregroundStyle(.white)
+    }
+    
     private var location: some View {
         HStack {
             Image(systemName: "mappin.circle")
@@ -109,6 +126,16 @@ struct ProfileCard: View {
             }
         }
         .padding()
+    }
+    
+    private var tagsGrid: some View {
+        Flex(direction: .row, justifyContent: .flexStart, alignItems: .center, wrap: .wrap, rowGap: 8, columnGap: 8) {
+            TagPill(tag: "Snowboarding", mode: .common)
+            ForEach(profile.tags, id: \.self) { tag in
+                TagPill(tag: tag, mode: .classic)
+            }
+        }
+        .frame(height: 70)
     }
 }
 
