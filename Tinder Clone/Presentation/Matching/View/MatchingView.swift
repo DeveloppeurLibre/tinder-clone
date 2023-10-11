@@ -15,7 +15,11 @@ struct MatchingView: View {
         VStack(spacing: 0) {
             Header()
                 .padding(.horizontal)
-            ProfileCard(profile: .previewProfile )
+            ZStack {
+                ForEach(Profile.previewProfiles) { profile in
+                    ProfileCard(profile: profile)
+                }
+            }
             Spacer()
         }
     }

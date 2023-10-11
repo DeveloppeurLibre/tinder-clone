@@ -21,7 +21,8 @@ struct ProfileCard: View {
             AsyncImage(url: profile.profilePictureURLs[pictureIndex]) { image in
                 image
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.height * 0.7)
                     .clipped()
                     .overlay {
                         HStack(spacing: 0) {
@@ -68,13 +69,14 @@ struct ProfileCard: View {
             }
             .padding()
             .padding(.top, 20)
-            .frame(maxWidth: .infinity, alignment: .leading)
             .background {
                 LinearGradient(colors: [.black, .clear], startPoint: .bottom, endPoint: .top)
             }
         }
         .overlay(alignment: .top) {
-            picturesIndicator
+            if profile.profilePictureURLs.count > 1 {
+                picturesIndicator
+            }
         }
         .cornerRadius(16)
         .offset(x: translationX, y: translationY)
