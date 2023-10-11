@@ -10,6 +10,9 @@ import YogaSwiftUI
 
 struct ProfileCard: View {
     
+    @State private var translationX: CGFloat = 0
+    @State private var translationY: CGFloat = 0
+    @State private var rotation: Double = 0
     @State private var pictureIndex = 0
     let profile: Profile
     
@@ -20,6 +23,25 @@ struct ProfileCard: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipped()
+                    .overlay {
+                        HStack(spacing: 0) {
+                            Rectangle().foregroundColor(.red.opacity(0.001))
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .onTapGesture {
+                                    if pictureIndex > 0 {
+                                        pictureIndex -= 1
+                                    }
+                                }
+                            Rectangle().foregroundColor(.black.opacity(0.001))
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .onTapGesture {
+                                    if pictureIndex < profile.profilePictureURLs.count {
+                                        pictureIndex += 1
+                                    }
+                                }
+                        }
+                        .frame(maxHeight: .infinity)
+                    }
             } placeholder: {
                 Rectangle()
                     .foregroundColor(.gray)
@@ -42,17 +64,7 @@ struct ProfileCard: View {
                         location
                     }
                 }
-                HStack {
-                    CircleButton(style: .rewind, action: {})
-                    Spacer()
-                    CircleButton(style: .dislike, action: {})
-                    Spacer()
-                    CircleButton(style: .superlike, action: {})
-                    Spacer()
-                    CircleButton(style: .like, action: {})
-                    Spacer()
-                    CircleButton(style: .boost, action: {})
-                }
+                buttonsStack
             }
             .padding()
             .padding(.top, 20)
@@ -64,30 +76,36 @@ struct ProfileCard: View {
         .overlay(alignment: .top) {
             picturesIndicator
         }
-        .overlay {
-            HStack(spacing: 0) {
-                
-                Rectangle().foregroundColor(.red.opacity(0.001))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .onTapGesture {
-                        print("Droite")
-                        if pictureIndex > 0 {
-                            pictureIndex -= 1
-                        }
-                    }
-                Rectangle().foregroundColor(.black.opacity(0.001))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .onTapGesture {
-                        print("gauche")
-                        if pictureIndex < profile.profilePictureURLs.count {
-                            pictureIndex += 1
-                        }
-                    }
-            }
-            .frame(maxHeight: .infinity)
-        }
         .cornerRadius(16)
+        .offset(x: translationX, y: translationY)
+        .rotationEffect(.degrees(rotation))
         .padding()
+    }
+    
+    private var buttonsStack: some View {
+        HStack {
+            CircleButton(style: .rewind, action: {})
+            Spacer()
+            CircleButton(style: .dislike, action: {
+                withAnimation(.easeOut(duration: 1)) {
+                    translationX = -UIScreen.main.bounds.width * 2
+                    translationY = -20
+                    rotation = -20
+                }
+            })
+            Spacer()
+            CircleButton(style: .superlike, action: {})
+            Spacer()
+            CircleButton(style: .like, action: {
+                withAnimation(.easeOut(duration: 1)) {
+                    translationX = UIScreen.main.bounds.width * 2
+                    translationY = 20
+                    rotation = 20
+                }
+            })
+            Spacer()
+            CircleButton(style: .boost, action: {})
+        }
     }
     
     private var description: some View {
