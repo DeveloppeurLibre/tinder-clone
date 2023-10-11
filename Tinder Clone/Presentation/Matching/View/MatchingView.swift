@@ -11,6 +11,11 @@ struct MatchingView: View {
     
     @StateObject var viewModel = MatchingViewModel(presentedProfiles: [])
     @State private var offsetAlert: CGFloat = -150
+    @State private var profilesWhoLikedYou: [Profile] = {
+        let profiles = Profile.previewProfiles.filter { _ in Bool.random() }
+        print("Profiles who liked you: \(profiles.map { $0.name }.joined(separator: ", "))")
+        return profiles
+    }()
     
     var body: some View {
         VStack(spacing: 0) {
@@ -18,15 +23,14 @@ struct MatchingView: View {
                 .padding(.horizontal)
             ZStack {
                 ForEach(Profile.previewProfiles) { profile in
-                    ProfileCard(profile: profile)
+                    ProfileCard(profile: profile) {
+                        if profilesWhoLikedYou.contains(where: { $0.id == profile.id }) {
+                            displayAlert()
+                        }
+                    }
                 }
             }
             Spacer()
-            Button(action: {
-                displayAlert()
-            }, label: {
-                Text("Show alert")
-            })
         }
         .overlay(alignment: .top) {
             MatchAlert(profile: .previewProfile)

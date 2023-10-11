@@ -16,6 +16,8 @@ struct ProfileCard: View {
     @State private var pictureIndex = 0
     let profile: Profile
     
+    let onLikeAction: () -> ()
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             AsyncImage(url: profile.profilePictureURLs[pictureIndex]) { image in
@@ -104,6 +106,7 @@ struct ProfileCard: View {
                     translationY = 20
                     rotation = 20
                 }
+                onLikeAction()
             })
             Spacer()
             CircleButton(style: .boost, action: {})
@@ -127,9 +130,9 @@ struct ProfileCard: View {
     private var profileName: some View {
         VStack {
             HStack(alignment: .bottom, spacing: 16) {
-                Text("Annie")
+                Text(profile.name)
                     .font(.system(size: 40, weight: .bold))
-                Text("28")
+                Text("\(profile.age)")
                     .font(.system(size: 28))
                     .padding(.bottom, 3)
             }
@@ -160,5 +163,5 @@ struct ProfileCard: View {
 }
 
 #Preview {
-    ProfileCard(profile: .previewProfile)
+    ProfileCard(profile: .previewProfile, onLikeAction: {})
 }
